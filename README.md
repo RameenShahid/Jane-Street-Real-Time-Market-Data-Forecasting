@@ -166,6 +166,20 @@ Dependencies are listed in `requirements.txt`, including:
 - jupyterlab
 
 ---
+## 📌 Project Summary
+
+This repository provides a complete exploratory analysis and data processing framework for the **Jane Street Real-Time Market Data Forecasting** competition on Kaggle.
+
+The objective is to **predict `responder_6`**, a proprietary market signal, using anonymized, high-frequency trading data across multiple instruments. The project focuses on:
+
+- Efficient loading and handling of large `.parquet` files using `polars`
+- Detailed EDA including missing value analysis, correlation insights, and statistical summaries
+- Time-series structure validation across `date_id`, `time_id`, and `symbol_id`
+- Visualization and understanding of lagged target values (`lags.parquet`)
+- Modular and reproducible code base ready for feature engineering and model development
+
+This serves as a strong foundation for building robust forecasting models in a real-time, API-driven environment.
+
 
 
 ---
