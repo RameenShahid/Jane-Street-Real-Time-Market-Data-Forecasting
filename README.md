@@ -21,14 +21,6 @@ This repository provides a comprehensive analysis and utility suite for the **Ja
 | `lags.parquet/`     | Lag-1 values of responders for each symbol_id |
 | `sample_submission.csv` | Example submission format for predictions |
 
-### Example Schema (`train.parquet`)
-```python
-┌───────────┬───────────┬──────────┬─────────────┬────────────┐
-│ date_id   │ time_id   │ symbol_id│ feature_00  │ responder_6│
-│ Int16     │ Int16     │ Int8     │ Float32     │ Float32    │
-└───────────┴───────────┴──────────┴─────────────┴────────────┘
----
-
 ## 🔍 What’s Inside
 
 ### ✅ Dataset Overview
