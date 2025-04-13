@@ -83,7 +83,54 @@ This repository provides a comprehensive analysis and utility suite for the **Ja
 - Aligns lag values for time-aware modeling.
 
 ---
+## 📊 Exploratory Data Analysis (EDA)
 
+This section provides a comprehensive breakdown of the exploratory insights derived from the Jane Street dataset.
+
+---
+
+### 🧾 1. Missing Value Inspection
+
+- 🔢 **Global null ratios** are computed for all 79 features.
+- 📊 **Bar charts** show availability vs missingness across usable samples.
+- 🕒 **Temporal null analysis** tracks missing patterns by `date_id`, helping identify data degradation or dropouts over time.
+
+---
+
+### 📊 2. Correlation Analysis
+
+- 🔗 **Feature-to-feature correlation matrix** highlights relationships between `feature_00` to `feature_78`.
+- 🔁 **Responder-to-responder heatmap** reveals interdependencies between target variables.
+- 🧱 **Cluster detection** allows dimensionality reduction and feature selection by identifying redundant variables.
+
+---
+
+### 📉 3. Statistical Summaries
+
+- 📦 Histograms of all responders (`responder_0` to `responder_8`) illustrate distribution shape.
+- 📈 For each responder, we compute:
+  - Mean
+  - Standard deviation
+  - Minimum and maximum values
+- 📌 Special attention is given to `responder_6` — the target for forecasting.
+
+---
+
+### 🧭 4. Time & Symbol Frequency Analysis
+
+- 🪙 **`symbol_id` frequency** plots show how often each financial instrument appears.
+- 🗓 **`date_id` coverage** checks ensure even temporal distribution across partitions.
+- ⏱ **Temporal alignment** validation confirms proper sequencing for lag features.
+
+---
+
+### 🔁 5. Lag Feature Preview
+
+- ⏮ `lags.parquet` provides **lag-1 responder values** for all symbols.
+- 🧩 These are served at the first `time_id` of each new `date_id`.
+- 📈 Visualization of `responder_6_lag_1` across symbols reveals carryover behavior and temporal consistency.
+
+---
 ## 🚀 Utility Scripts
 
 You can use the following batch scripts:
